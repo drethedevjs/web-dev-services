@@ -39,5 +39,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Thank you for checking out my portfolio! If you're interested in working together, feel free to reach out via the contact form or email me directly at [your-email@example.com].
+Thank you for checking out my portfolio! If you're interested in working together, feel free to reach out via email here [drethedevjs](drethedevjs@gmail.com).
 
