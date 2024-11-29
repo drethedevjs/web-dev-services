@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Web Developer Portfolio - Custom Websites for Small Businesses
 
-## Getting Started
+This repository contains the code for my personal web developer portfolio, showcasing my services to help small businesses build custom websites. The website is built using the following technologies:
 
-First, run the development server:
+- **Next.js 15** (with React)
+- **TypeScript**
+- **Tailwind CSS**
+- **Turbopack** (for fast bundling)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The website is hosted and deployed on [Vercel](https://vercel.com).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📖 About
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This website is designed to promote my services as a freelance web developer, specializing in building custom websites for small businesses. It highlights my technical skills, previous projects, and provides potential clients with easy access to get in touch.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+By visiting the site, small business owners can learn how I can help create professional, responsive websites tailored to their specific needs.
 
-## Learn More
+## 🛠️ Technologies
 
-To learn more about Next.js, take a look at the following resources:
+This project uses the following technologies:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 15**: A React-based framework for building scalable and optimized web applications.
+- **TypeScript**: A superset of JavaScript that adds static types for better developer experience.
+- **Tailwind CSS**: A utility-first CSS framework to quickly style the website with custom designs.
+- **Turbopack**: A fast bundler for Next.js, providing faster build times for a better developer experience.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+- **Modern Design**: Custom-built, responsive design using Tailwind CSS.
+- **Fast Loading**: Optimized performance with Next.js and Turbopack, ensuring fast load times.
+- **Mobile-Friendly**: Fully responsive layout for all device sizes.
+- **Contact Form**: Simple contact form with easy integration for future updates.
+- **SEO Optimized**: Proper SEO tags for better discoverability of your website.
+- **Hosting on Vercel**: Deployed and live on [Vercel](https://vercel.com), offering free hosting and continuous deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+Thank you for checking out my portfolio! If you're interested in working together, feel free to reach out via the contact form or email me directly at [your-email@example.com].
+
