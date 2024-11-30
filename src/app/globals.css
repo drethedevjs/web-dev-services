@@ -28,7 +28,7 @@ body {
 }
 
 nav > ul > li {
-  @apply text-white font-semibold uppercase border-b-white hover:text-secondary transition-colors;
+  @apply font-semibold uppercase border-b-white hover:text-secondary transition-colors;
 }
 
 .hero-section {
@@ -48,7 +48,7 @@ nav > ul > li {
 }
 
 .service-pane {
-  @apply bg-eggshell py-32 px-20 justify-center border-2 border-red-500;
+  @apply bg-eggshell py-32 px-20 justify-center;
 
   h2 {
     @apply text-8xl text-secondary text-center mb-3 font-bold;
@@ -81,4 +81,20 @@ nav > ul > li {
   p {
     @apply mt-3 text-xl;
   }
+}
+
+.contact-call-to-action {
+  @apply bg-primary py-32 px-20 flex flex-col text-center items-center border-red-500 border-2;
+
+  h2 {
+    @apply text-8xl text-secondary text-center mb-3 font-bold;
+  }
+
+  p {
+    @apply mt-3 text-2xl px-52;
+  }
+}
+
+.cta-btn {
+  @apply mt-20 py-3 px-6 bg-secondary text-primary border-2 border-secondary hover:bg-transparent hover:text-eggshell rounded-lg font-semibold text-2xl transition-colors;
 }
