@@ -48,14 +48,34 @@ nav > ul > li {
 }
 
 .service-pane {
-  @apply bg-eggshell py-32 px-20 grid grid-cols-3 gap-6 justify-center border-2 border-red-500;
+  @apply bg-eggshell py-32 px-20 justify-center border-2 border-red-500;
+
+  h2 {
+    @apply text-8xl text-secondary text-center mb-3 font-bold;
+  }
+
+  p {
+    @apply text-3xl text-primary text-center mb-10;
+  }
+}
+
+.offerings {
+  @apply grid grid-cols-3 gap-6;
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  p.description {
+    @apply text-xl text-eggshell;
+  }
 }
 
 .service-offering {
-  @apply p-8 border-2 bg-primary rounded-xl flex flex-col items-center text-center;
+  @apply p-8 border-4 hover:border-secondary bg-primary rounded-xl flex flex-col items-center text-center;
 
   h3 {
-    @apply text-3xl font-semibold mt-5;
+    @apply text-3xl font-semibold mt-5 text-secondary;
   }
 
   p {
