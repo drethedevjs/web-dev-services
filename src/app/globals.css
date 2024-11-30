@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -18,20 +18,47 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
+body {
+  @apply bg-primary text-eggshell;
+}
 .nav-links {
-  @apply text-2xl flex flex-row gap-5 p-10 bg-primary;
+  @apply text-2xl flex justify-center gap-8 p-10 bg-primary;
 }
 
 nav > ul > li {
-  @apply text-white font-semibold hover:text-secondary transition-colors;
+  @apply text-white font-semibold uppercase border-b-white hover:text-secondary transition-colors;
 }
 
-.hero-img {
-  @apply h-96 border-red-600 bg-cover bg-center;
+.hero-section {
+  @apply flex flex-col items-center py-24;
+
+  h1 {
+    @apply text-6xl font-bold mt-10;
+  }
+
+  p {
+    @apply mt-5 text-2xl
+  }
 }
 
-h1 {
-  @apply text-6xl font-bold text-white absolute bottom-1;
+.computer-desktop-icon {
+  @apply size-1/5;
+}
+
+.service-pane {
+  @apply bg-eggshell py-32 px-20 grid grid-cols-3 gap-6 justify-center border-2 border-red-500;
+}
+
+.service-offering {
+  @apply p-8 border-2 bg-primary rounded-xl flex flex-col items-center text-center;
+
+  h3 {
+    @apply text-3xl font-semibold mt-5;
+  }
+
+  p {
+    @apply mt-3 text-xl;
+  }
 }
