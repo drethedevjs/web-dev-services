@@ -4,7 +4,6 @@ export default function Services() {
   return (
     <section>
       <div className="service-pane">
-
         <h2>Service Offerings</h2>
         <p>We offer the best-in-class web services to small businesses.</p>
         <div className="offerings">
