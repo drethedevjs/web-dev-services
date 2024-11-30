@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         primary: "#2a2a72",
         secondary: "#FFA400",
+        eggshell: "#F0EAD6"
       },
     },
   },
