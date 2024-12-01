@@ -23,23 +23,31 @@ body {
 body {
   @apply bg-primary text-eggshell;
 }
+
 .nav-links {
-  @apply text-2xl flex justify-center gap-8 p-10 bg-primary;
+  @apply text-2xl md:flex hidden justify-center gap-8 p-10 bg-primary ;
 }
 
-nav > ul > li {
+.mobile-nav-links {
+  @apply h-full w-3/4 fixed z-10 bg-secondary;
+}
+nav > ul.mobile-nav-links > li {
+  @apply text-2xl md:hidden flex flex-col py-5 border-b-4 border-b-primary  text-primary;
+}
+
+nav > ul.nav-links > li {
   @apply font-semibold uppercase border-b-white hover:text-secondary transition-colors;
 }
 
 .hero-section {
-  @apply flex flex-col items-center py-24;
+  @apply flex flex-col items-center text-center md:py-24 py-5;
 
   h1 {
-    @apply text-6xl font-bold mt-10;
+    @apply md:text-6xl text-3xl font-bold mt-10;
   }
 
   p {
-    @apply mt-5 text-2xl text-secondary;
+    @apply mt-5 md:text-2xl text-xl text-secondary;
   }
 }
 
@@ -48,19 +56,19 @@ nav > ul > li {
 }
 
 .service-pane {
-  @apply bg-eggshell py-32 px-20 justify-center;
+  @apply bg-eggshell md:py-32 py-20 px-20 justify-center;
 
   h2 {
-    @apply text-8xl text-secondary text-center mb-3 font-bold;
+    @apply md:text-8xl text-6xl text-secondary text-center mb-3 font-bold;
   }
 
   p {
-    @apply text-3xl text-primary text-center mb-10;
+    @apply md:text-3xl text-xl text-primary text-center mb-10;
   }
 }
 
 .offerings {
-  @apply grid grid-cols-3 gap-6;
+  @apply grid md:grid-cols-3 grid-cols-1 md:gap-6 gap-3;
 
   h3 {
     @apply text-3xl;
@@ -72,10 +80,10 @@ nav > ul > li {
 }
 
 .service-offering {
-  @apply p-8 border-4 hover:border-secondary bg-primary rounded-xl flex flex-col items-center text-center;
+  @apply md:p-8 p-5 border-4 hover:border-secondary bg-primary rounded-xl flex flex-col items-center text-center;
 
   h3 {
-    @apply text-3xl font-semibold mt-5 text-secondary;
+    @apply md:text-3xl text-2xl font-semibold mt-5 text-secondary;
   }
 
   p {
@@ -87,11 +95,11 @@ nav > ul > li {
   @apply bg-primary py-32 px-20 flex flex-col text-center items-center;
 
   h2 {
-    @apply text-8xl text-secondary text-center mb-3 font-bold;
+    @apply md:text-8xl text-6xl text-secondary text-center mb-3 font-bold;
   }
 
   p {
-    @apply mt-3 text-2xl px-52;
+    @apply mt-3 text-2xl lg:px-52 px-0;
   }
 }
 
@@ -100,13 +108,17 @@ nav > ul > li {
 }
 
 .about-container {
-  @apply container mx-auto px-52;
+  @apply container mx-auto lg:px-52 px-10;
 
   h1 {
-    @apply text-8xl mb-10 text-right;
+    @apply md:text-8xl text-5xl mb-10 mt-10 md:mt-0 md:text-right;
   }
 
   p {
     @apply text-3xl ml-10 mb-5 leading-10;
   }
+}
+
+footer {
+  @apply p-10 text-center text-black bg-eggshell text-xl border-2 border-red-500;
 }
