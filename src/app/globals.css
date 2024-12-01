@@ -115,7 +115,7 @@ nav > ul.nav-links > li {
   }
 
   p {
-    @apply text-3xl ml-10 mb-5 leading-10;
+    @apply text-2xl mb-5 leading-9;
   }
 }
 
