@@ -39,7 +39,7 @@ nav > ul > li {
   }
 
   p {
-    @apply mt-5 text-2xl
+    @apply mt-5 text-2xl text-secondary;
   }
 }
 
@@ -84,7 +84,7 @@ nav > ul > li {
 }
 
 .contact-call-to-action {
-  @apply bg-primary py-32 px-20 flex flex-col text-center items-center border-red-500 border-2;
+  @apply bg-primary py-32 px-20 flex flex-col text-center items-center;
 
   h2 {
     @apply text-8xl text-secondary text-center mb-3 font-bold;
@@ -97,4 +97,16 @@ nav > ul > li {
 
 .cta-btn {
   @apply mt-20 py-3 px-6 bg-secondary text-primary border-2 border-secondary hover:bg-transparent hover:text-eggshell rounded-lg font-semibold text-2xl transition-colors;
+}
+
+.about-container {
+  @apply container mx-auto px-52;
+
+  h1 {
+    @apply text-8xl mb-10 text-right;
+  }
+
+  p {
+    @apply text-3xl ml-10 mb-5 leading-10;
+  }
 }
