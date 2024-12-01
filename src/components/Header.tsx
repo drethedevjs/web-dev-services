@@ -31,7 +31,7 @@ export default function Header() {
           <button onClick={() => navigate("/contact")}>Contact</button>
         </li>
       </ul>
-      <button className="uppercase text-2xl py-3 w-full text-center border-2 border-secondary" onClick={toggleMenu}>Menu</button>
+      <button className="md:hidden uppercase text-2xl py-3 w-full text-center border-2 border-secondary" onClick={toggleMenu}>Menu</button>
       <ul className={`mobile-nav-links ${showMenu ? 'flex flex-col' : 'hidden'}`}>
         <li>
           <button onClick={() => navigate("/")}>Home</button>
