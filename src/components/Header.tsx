@@ -6,10 +6,12 @@ export default function Header() {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const navigate = (page: string) => {
+  const navigate = (page: string, isMobile: boolean = false) => {
     router.push(page);
-    toggleMenu();
+    if (isMobile)
+      toggleMenu();
   }
+  
   const toggleMenu = () => {
     const menuWillShow = showMenu;
     setShowMenu(!menuWillShow)
@@ -34,16 +36,16 @@ export default function Header() {
       <button className="md:hidden uppercase text-2xl py-3 w-full text-center border-2 border-secondary" onClick={toggleMenu}>Menu</button>
       <ul className={`mobile-nav-links ${showMenu ? 'flex flex-col' : 'hidden'}`}>
         <li>
-          <button onClick={() => navigate("/")}>Home</button>
+          <button onClick={() => navigate("/", true)}>Home</button>
         </li>
         <li>
-          <button onClick={() => navigate("/about")}>About</button>
+          <button onClick={() => navigate("/about", true)}>About</button>
         </li>
         <li>
-          <button onClick={() => navigate("/services")}>Services</button>
+          <button onClick={() => navigate("/services", true)}>Services</button>
         </li>
         <li>
-          <button onClick={() => navigate("/contact")}>Contact</button>
+          <button onClick={() => navigate("/contact", true)}>Contact</button>
         </li>
       </ul>
     </nav>
