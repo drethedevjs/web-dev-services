@@ -28,7 +28,10 @@ export const metadata: Metadata = {
     description: "Building custom websites for small businesses.",
     siteName: "CSRA Web Services",
     images: [{
-      url: "/frontend/public/csra-web-dev-screensht.png",
+      url: "https://csra-web-services.vercel.app/csra-web-dev-screensht.png", // Corrected image URL
+      width: 1920,
+      height: 1080,
+      alt: "Screenshot of CSRA Web Services"
     }],
    }
 };
