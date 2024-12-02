@@ -19,7 +19,7 @@ export default function CallToAction({ title, icon, buttonText }: ICallToActionP
         development that's tailored to your business needs. Reach out today to get 
         started and let's make your vision a reality!
       </p>
-      <button className="cta-btn" onClick={() => router.push("/")}>{ buttonText }</button>
+      <button className="cta-btn" onClick={() => router.push("/contact")}>{ buttonText }</button>
     </div>
   )
 }
