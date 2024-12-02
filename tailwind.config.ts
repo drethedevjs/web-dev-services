@@ -11,9 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#2a2a72",
-        secondary: "#FFA400",
-        eggshell: "#F0EAD6"
+        dark: "#333333",
+        primary: "#4C9BFC",
+        secondary: "#FF7B5B",
+        eggshell: "#F5F5F5", // "#F0EAD6"
       },
     },
   },

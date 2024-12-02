@@ -5,7 +5,7 @@ export default function Services() {
     <section>
       <div className="service-pane">
         <h2>Service Offerings</h2>
-        <p>We offer the best-in-class web services to small businesses.</p>
+        <p className="service-subtitle">We offer the best-in-class web services to small businesses.</p>
         <div className="offerings">
           {
             services.map(s => {

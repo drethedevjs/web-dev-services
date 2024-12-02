@@ -52,7 +52,7 @@ nav > ul.nav-links > li {
   }
 
   p {
-    @apply mt-5 md:text-2xl text-xl text-secondary;
+    @apply mt-5 md:text-2xl text-xl text-secondary bg-eggshell px-10 py-2 rounded-xl;
   }
 }
 
@@ -67,8 +67,8 @@ nav > ul.nav-links > li {
     @apply md:text-8xl text-6xl text-secondary text-center mb-3 font-bold;
   }
 
-  p {
-    @apply md:text-3xl text-xl text-primary text-center mb-10;
+  p.service-subtitle {
+    @apply md:text-3xl text-xl text-primary text-center mb-10 font-semibold;
   }
 }
 
@@ -76,20 +76,16 @@ nav > ul.nav-links > li {
   @apply grid md:grid-cols-3 grid-cols-1 md:gap-6 gap-3;
 
   h3 {
-    @apply text-3xl;
+    @apply text-2xl bg-eggshell rounded-lg px-10 py-2 md:text-4xl font-semibold mt-5 text-secondary;
   }
 
   p.description {
-    @apply text-xl text-eggshell;
+    @apply text-3xl text-eggshell mt-6 mb-6;
   }
 }
 
 .service-offering {
   @apply md:p-8 p-5 border-4 hover:border-secondary bg-primary rounded-xl flex flex-col items-center text-center;
-
-  h3 {
-    @apply md:text-3xl text-2xl font-semibold mt-5 text-secondary;
-  }
 
   p {
     @apply mt-3 text-xl;
@@ -100,28 +96,30 @@ nav > ul.nav-links > li {
   @apply bg-primary py-32 px-20 flex flex-col text-center items-center;
 
   h2 {
-    @apply md:text-8xl text-6xl text-secondary text-center mb-3 font-bold;
+    @apply md:text-8xl text-6xl text-eggshell text-center mb-3 font-bold;
   }
 
   p {
-    @apply mt-3 text-2xl lg:px-52 px-0;
+    @apply mt-3 text-2xl lg:px-52 px-0 font-semibold;
   }
 }
 
 .cta-btn {
-  @apply mt-20 py-3 px-6 bg-secondary text-primary border-2 border-secondary hover:bg-transparent hover:text-eggshell rounded-lg font-semibold text-2xl transition-colors;
+  @apply mt-20 py-3 px-6 bg-secondary text-eggshell border-2 border-secondary hover:bg-eggshell hover:text-secondary rounded-lg font-semibold text-2xl transition-colors;
 }
 
-.about-container {
-  @apply container mx-auto lg:px-52 px-10;
-
+.page {
   h1 {
     @apply md:text-8xl text-5xl mb-10 mt-10 md:mt-0 md:text-right;
   }
 
   p {
-    @apply text-2xl mb-5 leading-9;
+    @apply text-3xl mb-5 leading-10;
   }
+}
+
+.wds-container {
+  @apply container mx-auto lg:px-52 px-10
 }
 
 footer {

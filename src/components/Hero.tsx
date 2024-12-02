@@ -5,7 +5,7 @@ export default function Hero() {
     <div className="hero-section">
         <ComputerDesktopIcon className="computer-desktop-icon" />
       <h1>Web Development Services</h1>
-      <p>Building Custom Web Applications for Small Businesses</p>
+      <p className="font-semibold">Building Custom Web Applications for Small Businesses</p>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import CallToAction from "@/components/CallToAction";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import { PhoneArrowDownLeftIcon } from "@heroicons/react/16/solid";
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
       <Services />
       <CallToAction
         title="Get in Touch"
-        icon={PhoneArrowDownLeftIcon}
+        icon="phone"
         buttonText="Contact Us"
         />
     </>
