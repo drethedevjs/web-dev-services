@@ -28,15 +28,20 @@ body {
   @apply text-2xl md:flex hidden justify-center gap-8 p-10 bg-primary ;
 }
 
-.mobile-nav-links {
-  @apply h-full w-3/4 fixed z-10 bg-secondary;
+.mobile-nav-container {
+  @apply h-full w-3/4 fixed z-10 bg-secondary md:hidden;
 }
-nav > ul.mobile-nav-links > li {
-  @apply text-2xl md:hidden flex flex-col py-5 border-b-4 border-b-primary  text-primary;
+
+ul.mobile-nav-links > li {
+  @apply text-2xl  flex flex-col py-5 border-b-4 border-b-primary text-primary;
 }
 
 nav > ul.nav-links > li {
   @apply font-semibold uppercase border-b-white hover:text-secondary transition-colors;
+}
+
+.mobile-menu-btn {
+  @apply md:hidden uppercase text-2xl py-3 w-full text-center border-2 border-secondary mb-8;
 }
 
 .hero-section {
