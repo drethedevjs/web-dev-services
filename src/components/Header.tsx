@@ -38,7 +38,7 @@ export default function Header() {
       <button className={`mobile-menu-btn ${showMenu ? 'hidden' : ''}`} onClick={toggleMenu} >Menu</button>
       <div className={`mobile-nav-container ${showMenu ? 'flex flex-col' : 'hidden'}`}>
         <div className="place-items-center">
-          <XCircleIcon className="size-12 m-5 text-primary" onClick={toggleMenu} />
+          <XCircleIcon className="size-12 m-5" onClick={toggleMenu} />
         </div>
         <ul className="mobile-nav-links">
           <li>
