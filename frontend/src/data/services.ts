@@ -1,5 +1,5 @@
-import { IService } from "@/interfaces/IService";
 import { CodeBracketIcon, GlobeAltIcon, WrenchScrewdriverIcon } from "@heroicons/react/16/solid";
+import { IService } from "../interfaces/IService";
 
 const services: IService[] = [
   {
