@@ -1,0 +1,7 @@
+input, textarea {
+  @apply w-full rounded-lg p-5 text-3xl text-dark mt-3 focus:ring-4 focus:ring-secondary ring-2 ring-dark;
+}
+
+label {
+  @apply text-2xl font-semibold
+}
