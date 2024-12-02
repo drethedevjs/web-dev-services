@@ -18,9 +18,19 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "CSRA Custom Websites",
   description: "Building Custom Web Applications for Small Businesses",
-  authors: [{ name: "Andre Thomas", url: "https://web-development-services.vercel.app" }],
+  authors: [{ name: "Andre Thomas", url: "https://csra-web-services.vercel.app" }],
   generator: "Next.js",
-  keywords: ["custom website", "website", "hosting"]
+  keywords: ["custom website", "website", "hosting"],
+  openGraph: {
+    type: "website",
+    url: "https://csra-web-services.vercel.app",
+    title: "CSRA Web Services",
+    description: "Building custom websites for small businesses.",
+    siteName: "CSRA Web Services",
+    images: [{
+      url: "/frontend/public/csra-web-dev-screensht.png",
+    }],
+   }
 };
 
 export default function RootLayout({
