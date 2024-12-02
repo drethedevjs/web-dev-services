@@ -5,14 +5,14 @@ import { PhoneArrowDownLeftIcon } from "@heroicons/react/16/solid";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Services />
-      <CallToAction 
-        title="Get in Touch" 
-        icon={PhoneArrowDownLeftIcon} 
+      <CallToAction
+        title="Get in Touch"
+        icon={PhoneArrowDownLeftIcon}
         buttonText="Contact Us"
-      />
-    </main>
+        />
+    </>
   );
 }

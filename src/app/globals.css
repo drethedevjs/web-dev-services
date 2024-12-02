@@ -125,5 +125,5 @@ nav > ul.nav-links > li {
 }
 
 footer {
-  @apply p-10 text-center text-black bg-eggshell text-xl border-2 border-red-500;
+  @apply p-10 text-center text-black bg-eggshell text-xl;
 }
