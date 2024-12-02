@@ -27,9 +27,9 @@ export default function Header() {
         <li>
           <button onClick={() => navigate("/about")}>About</button>
         </li>
-        <li>
+        {/* <li>
           <button onClick={() => navigate("/services")}>Services</button>
-        </li>
+        </li> */}
         <li>
           <button onClick={() => navigate("/contact")}>Contact</button>
         </li>
@@ -47,9 +47,9 @@ export default function Header() {
           <li>
             <button onClick={() => navigate("/about", true)}>About</button>
           </li>
-          <li>
+          {/* <li>
             <button onClick={() => navigate("/services", true)}>Services</button>
-          </li>
+          </li> */}
           <li>
             <button onClick={() => navigate("/contact", true)}>Contact</button>
           </li>
