@@ -8,10 +8,10 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "baseUrl": ".",
     "resolveJsonModule": true
   },
-  "include": ["./src/**/*"],
+  "files": ["./server.ts"],
+  "include": ["./src/**/*.ts", "./netlify/**/*.ts"],
   "exclude": ["node_modules"]
 }
