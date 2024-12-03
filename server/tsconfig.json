@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
     "baseUrl": ".",
+    "sourceMap": true,
     "resolveJsonModule": true
   },
-  "files": ["./server.ts"],
-  "include": ["./src/**/*.ts", "./netlify/**/*.ts"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
 }
