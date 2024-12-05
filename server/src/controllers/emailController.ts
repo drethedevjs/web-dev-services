@@ -3,7 +3,8 @@ import mailer from '../mailer.js';
 
 const emailController = {
   default: async (req: Request, res: Response, next: NextFunction) => {
-    res.status(200).send({message: "All systems go!"});
+    const { ip } = req;
+    res.status(200).send({message: `All systems go! IP Address: ${ip}`});
   },
   sendEmail: async (req: Request, res: Response, next: NextFunction) => {
     const { name, toEmail, message } = req.body;

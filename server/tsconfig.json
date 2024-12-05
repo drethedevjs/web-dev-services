@@ -13,6 +13,7 @@
     "resolveJsonModule": true
   },
   "$schema": "https://json.schemastore.org/tsconfig",
+  "files": ["server.ts"],
   "include": ["./src/**/*.ts"],
   "exclude": ["node_modules"]
 }
