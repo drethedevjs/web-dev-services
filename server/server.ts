@@ -15,7 +15,11 @@ const emailLimiter = rateLimit({
 });
 
 // Middleware
-app.use(cors());
+const corsOptions = {
+  origin: ["http://localhost:3000", "https://wedding-photography-six.vercel.app", "https://covenantlx.com"]
+}
+
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use("/api/email", emailLimiter, router);
 
