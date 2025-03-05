@@ -20,9 +20,18 @@ const emailController = {
       <p><b>Email:</b> ${email}</p>
       <p><b>Message:</b> ${message}</p>
     `
+
+    const text = `
+      Name: ${firstName} ${lastName}
+      Email: ${email}
+
+      Message:
+      ${message}
+    `;
+
     try {
       // Send the email using Nodemailer
-      let response = await mailer.sendEmail(html, `CSRA Web Dev Inquiry`, email, process.env.MY_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `CSRA Web Dev Inquiry`, email, process.env.MY_EMAIL!);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
@@ -47,9 +56,24 @@ const emailController = {
       <p><b>Phone:</b> ${phone}</p>
       <p><b>Venue:</b> ${venue}</p>
       <p><b>Message:</b> ${message}</p>
-    `
+    `;
+
+    const text = `
+      Bride: ${brideName}
+      Groom: ${groomName}
+      Email: ${email}
+      Wedding Date: ${weddingDate}
+      Phone: ${phone}
+      Venue: ${venue}
+
+      Message:
+      ${message}
+      `;
+
+      console.log("process.env.COVENANT_EMAIL", process.env.COVENANT_EMAIL)
     try {
-      let response = await mailer.sendEmail(html, `Wedding Inquiry for ${weddingDate}`, email, process.env.COVENANT_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `Wedding Inquiry for ${weddingDate}`, email, process.env.COVENANT_EMAIL!);
+      console.log("RESPONSE", response);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
