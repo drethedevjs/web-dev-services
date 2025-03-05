@@ -32,7 +32,7 @@ app.use(bodyParser.json());
 app.use("/api/email", emailLimiter, router);
 
 // Start the server
-app.listen(port, '127.0.0.1', () => {
+app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
