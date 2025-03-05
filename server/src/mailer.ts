@@ -7,7 +7,6 @@ const mailer = {
     html: string,
     text: string,
     subject: string,
-    email: string,
     businessEmail: string
   ) => {
     if (!process.env.SENDGRID_API_KEY)
@@ -16,7 +15,7 @@ const mailer = {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
-      to: email,
+      to: businessEmail,
       from: businessEmail, // Change to your verified sender
       subject: subject,
       text: text,

@@ -31,7 +31,7 @@ const emailController = {
 
     try {
       // Send the email using Nodemailer
-      let response = await mailer.sendEmail(html, text, `CSRA Web Dev Inquiry`, email, process.env.MY_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `CSRA Web Dev Inquiry`, process.env.MY_EMAIL!);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
@@ -70,10 +70,37 @@ const emailController = {
       ${message}
       `;
 
-      console.log("process.env.COVENANT_EMAIL", process.env.COVENANT_EMAIL)
     try {
-      let response = await mailer.sendEmail(html, text, `Wedding Inquiry for ${weddingDate}`, email, process.env.COVENANT_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `Wedding Inquiry for ${weddingDate}`, process.env.COVENANT_EMAIL!);
       console.log("RESPONSE", response);
+      res.status(200).send(response);
+    } catch (err: any) {
+      console.error("Error sending email!", err);
+      res.status(500).send({ error: `Error sending email: ${err.message}` });
+    }
+  },
+  sendCaptureTheVisionEmail: async (req: Request, res: Response, next: NextFunction) => {
+    const {
+      firstName,
+      lastName,
+      email,
+      familySize,
+      phone,
+      message
+    } = req.body;
+
+    const html = `
+      <p><b>Name:</b> ${firstName} ${lastName}</p>
+      <p><b>Phone:</b> ${phone}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Family Size:</b> ${familySize}</p>
+      <p><b>Message:</b> ${message}</p>
+    `;
+
+    const text = `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
+
+    try {
+      let response = await mailer.sendEmail(html, text, `${lastName} Family Portraits / ${(new Date()).getFullYear()}`, process.env.CTV_EMAIL!);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
