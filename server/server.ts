@@ -21,7 +21,7 @@ const corsOptions = {
     "http://localhost:5173", 
     "https://csra-web-services.vercel.app/",
     "https://wedding-photography-six.vercel.app", 
-    "https://eleventhandpemberton.com", 
+    "https://www.eleventhandpemberton.com", 
     "https://covenantlx.com"],
   methods: ["POST", "GET", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
