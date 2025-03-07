@@ -106,6 +106,35 @@ const emailController = {
       console.error("Error sending email!", err);
       res.status(500).send({ error: `Error sending email: ${err.message}` });
     }
+  },
+  sendEpEmail: async (req: Request, res: Response, next: NextFunction) => {
+    const {
+      name,
+      email,
+      businessName,
+      website,
+      phone,
+      message
+    } = req.body;
+
+    const html = `
+      <p><b>Name:</b> ${name}</p>
+      <p><b>Phone:</b> ${phone}</p>
+      <p><b>Email:</b> ${email}</p>
+      <p><b>Business Name:</b> ${businessName}</p>
+      <p><b>Business Website:</b> ${website}</p>
+      <p><b>Message:</b> ${message}</p>
+    `;
+
+    const text = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nBusinessName\n\nBusiness Website:${businessName}\n\nMessage:${website}\n${message}`;
+
+    try {
+      let response = await mailer.sendEmail(html, text, `Investment Opportunity with ${businessName}`, process.env.EP_EMAIL!);
+      res.status(200).send(response);
+    } catch (err: any) {
+      console.error("Error sending email!", err);
+      res.status(500).send({ error: `Error sending email: ${err.message}` });
+    }
   }
 }
 
