@@ -7,8 +7,9 @@ const mailer = {
     html: string,
     text: string,
     subject: string,
-    businessEmail: string,
-    senderEmail: string | null = null
+    toEmail: string, // can be any valid email.
+    fromEmail: string, // needs to be an SG authenticated domain.
+    replyTo: string = 'noreply@ctvphotovideo.com'
   ) => {
     if (!process.env.SENDGRID_API_KEY)
       throw new Error("SendGrid API Key missing!");
@@ -16,9 +17,9 @@ const mailer = {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
-      to: businessEmail,
-      from: businessEmail, // Change to your verified sender
-      replyTo: senderEmail ?? businessEmail,
+      to: toEmail,
+      from: fromEmail,
+      replyTo: replyTo,
       subject: subject,
       text: text,
       html: html,
@@ -26,11 +27,12 @@ const mailer = {
 
     try
     {
+      console.info("Sending Email...")
       const result = await sgMail.send(msg);
-      console.log("result", result);
+      console.info("Email sent!");
       return result;
     } catch(error: any) {
-      console.error(error)
+      console.error(error);
     }
   }
 }
