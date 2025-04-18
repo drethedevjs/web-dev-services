@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { XCircleIcon } from "@heroicons/react/16/solid";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -9,14 +9,13 @@ export default function Header() {
 
   const navigate = (page: string, isMobile: boolean = false) => {
     router.push(page);
-    if (isMobile)
-      toggleMenu();
-  }
-  
+    if (isMobile) toggleMenu();
+  };
+
   const toggleMenu = () => {
     const menuWillShow = showMenu;
-    setShowMenu(!menuWillShow)
-  }
+    setShowMenu(!menuWillShow);
+  };
 
   return (
     <nav>
@@ -31,12 +30,17 @@ export default function Header() {
           <button onClick={() => navigate("/services")}>Services</button>
         </li> */}
         <li>
+          <button onClick={() => navigate("/portfolio")}>Portfolio</button>
+        </li>
+        <li>
           <button onClick={() => navigate("/contact")}>Contact</button>
         </li>
       </ul>
 
-      <button className={`mobile-menu-btn ${showMenu ? 'hidden' : ''}`} onClick={toggleMenu} >Menu</button>
-      <div className={`mobile-nav-container ${showMenu ? 'flex flex-col' : 'hidden'}`}>
+      <button className={`mobile-menu-btn ${showMenu ? "hidden" : ""}`} onClick={toggleMenu}>
+        Menu
+      </button>
+      <div className={`mobile-nav-container ${showMenu ? "flex flex-col" : "hidden"}`}>
         <div className="place-items-center">
           <XCircleIcon className="size-12 m-5" onClick={toggleMenu} />
         </div>
@@ -56,5 +60,5 @@ export default function Header() {
         </ul>
       </div>
     </nav>
-  )
+  );
 }
