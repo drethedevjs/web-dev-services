@@ -7,7 +7,8 @@ const mailer = {
     html: string,
     text: string,
     subject: string,
-    businessEmail: string
+    businessEmail: string,
+    senderEmail: string | null = null
   ) => {
     if (!process.env.SENDGRID_API_KEY)
       throw new Error("SendGrid API Key missing!");
@@ -17,6 +18,7 @@ const mailer = {
     const msg = {
       to: businessEmail,
       from: businessEmail, // Change to your verified sender
+      replyTo: senderEmail ?? businessEmail,
       subject: subject,
       text: text,
       html: html,

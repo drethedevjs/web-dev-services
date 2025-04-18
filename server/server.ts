@@ -19,7 +19,7 @@ const corsOptions = {
   origin: [
     "http://localhost:3000", 
     "http://localhost:5173", 
-    "https://csra-web-services.vercel.app/",
+    "https://csra-web-services.vercel.app",
     "https://wedding-photography-six.vercel.app", 
     "https://www.eleventhandpemberton.com", 
     "https://covenantlx.com"],

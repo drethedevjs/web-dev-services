@@ -31,7 +31,9 @@ const emailController = {
 
     try {
       // Send the email using Nodemailer
-      let response = await mailer.sendEmail(html, text, `CSRA Web Dev Inquiry`, process.env.MY_EMAIL!);
+      console.log("ABOUT TO SEND EMAIL!")
+      let response = await mailer.sendEmail(html, text, `CSRA Web Dev Inquiry`, email, process.env.MY_EMAIL!);
+      console.log("EMAIL SENT!")
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
@@ -71,7 +73,7 @@ const emailController = {
       `;
 
     try {
-      let response = await mailer.sendEmail(html, text, `Wedding Inquiry for ${weddingDate}`, process.env.COVENANT_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `Wedding Inquiry for ${weddingDate}`, process.env.COVENANT_EMAIL!, email);
       console.log("RESPONSE", response);
       res.status(200).send(response);
     } catch (err: any) {
@@ -100,7 +102,7 @@ const emailController = {
     const text = `Name: ${firstName} ${lastName}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`;
 
     try {
-      let response = await mailer.sendEmail(html, text, `${lastName} Family Portraits / ${(new Date()).getFullYear()}`, process.env.CTV_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `${lastName} Family Portraits / ${(new Date()).getFullYear()}`, process.env.CTV_EMAIL!, email);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
@@ -129,7 +131,7 @@ const emailController = {
     const text = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nBusinessName\n\nBusiness Website:${businessName}\n\nMessage:${website}\n${message}`;
 
     try {
-      let response = await mailer.sendEmail(html, text, `Investment Opportunity with ${businessName}`, process.env.EP_EMAIL!);
+      let response = await mailer.sendEmail(html, text, `Investment Opportunity with ${businessName}`, process.env.EP_EMAIL!, email);
       res.status(200).send(response);
     } catch (err: any) {
       console.error("Error sending email!", err);
