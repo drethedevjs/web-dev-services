@@ -1,4 +1,3 @@
-import LinkIcon from "@/components/icons/LinkIcon";
 import websites from "@/data/websites";
 import { Card } from "flowbite-react";
 
@@ -16,8 +15,12 @@ const Portfolio = () => {
                 {w.name}
               </h5>
               <p className="font-normal text-gray-700 dark:text-gray-400">{w.description}</p>
-              <a href={w.link} target="_blank" className="mt-auto">
-                <LinkIcon />
+              <a
+                href={w.link}
+                target="_blank"
+                className="mt-auto bg-secondary py-3 place-items-center rounded-md text-white hover:bg-white hover:text-secondary hover:border-secondary border-2 border-secondary transition-colors font-bold"
+              >
+                View
               </a>
             </Card>
           );
