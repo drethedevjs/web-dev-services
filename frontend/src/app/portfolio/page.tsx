@@ -18,7 +18,7 @@ const Portfolio = () => {
               <a
                 href={w.link}
                 target="_blank"
-                className="mt-auto bg-secondary py-3 place-items-center rounded-md text-white hover:bg-white hover:text-secondary hover:border-secondary border-2 border-secondary transition-colors font-bold"
+                className="mt-auto bg-secondary py-3 place-items-center rounded-md text-white text-center hover:bg-white hover:text-secondary hover:border-secondary border-2 border-secondary transition-colors font-bold"
               >
                 View
               </a>
