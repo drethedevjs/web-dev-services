@@ -2,13 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   @apply bg-primary text-eggshell;
 }
 
 .nav-links {
-  @apply text-2xl md:flex hidden justify-center gap-8 p-10 bg-primary ;
+  @apply text-2xl md:flex hidden justify-center gap-8 p-10 bg-primary;
 }
 
 .mobile-nav-container {
@@ -97,12 +96,12 @@ nav > ul.nav-links > li {
   }
 
   p {
-    @apply text-3xl mb-5 leading-10;
+    @apply text-xl mb-5 leading-8;
   }
 }
 
 .wds-container {
-  @apply container mx-auto lg:px-52 px-10
+  @apply container mx-auto lg:px-32 px-10;
 }
 
 footer {
