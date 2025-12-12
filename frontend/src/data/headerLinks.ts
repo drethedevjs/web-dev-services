@@ -15,7 +15,7 @@ export const headerLinks = [
     active: true,
   },
   {
-    title: "contact",
+    title: "Contact",
     path: "/contact",
     active: true,
   },
