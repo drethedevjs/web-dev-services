@@ -31,7 +31,7 @@
 }
 
 body {
-  @apply text-eggshell;
+  @apply text-eggshell dark:bg-black;
 }
 
 .nav-links {
