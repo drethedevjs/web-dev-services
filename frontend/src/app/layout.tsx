@@ -6,18 +6,18 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "CSRA Custom Websites and Web Applications",
   description: "Building Custom Web Applications for Small Businesses",
-  authors: [{ name: "Andre Thomas", url: "https://csra-web-services.vercel.app" }],
+  authors: [{ name: "Andre Thomas", url: "https://honeystack.solutions" }],
   generator: "Next.js",
   keywords: ["custom website", "website", "hosting"],
   openGraph: {
     type: "website",
-    url: "https://csra-web-services.vercel.app",
+    url: "https://honeystack.solutions",
     title: "CSRA Web Services",
     description: "Building custom websites for small businesses.",
     siteName: "CSRA Web Services",
     images: [
       {
-        url: "https://csra-web-services.vercel.app/csra-web-dev-screensht.png", // Corrected image URL
+        url: "https://honeystack.solutions/csra-web-dev-screensht.png",
         width: 1920,
         height: 1080,
         alt: "Screenshot of CSRA Web Services",
