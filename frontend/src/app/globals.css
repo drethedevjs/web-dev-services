@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@import "preline/variants.css";
+@source "../node_modules/preline/dist/*.js";
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

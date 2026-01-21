@@ -1,3 +1,4 @@
+import PrelineScriptWrapper from "@/components/PrelineWrapper";
 import type { Metadata } from "next";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -40,6 +41,7 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+      <PrelineScriptWrapper />
     </html>
   );
 }
