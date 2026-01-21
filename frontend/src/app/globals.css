@@ -31,7 +31,7 @@
 }
 
 body {
-  @apply bg-primary text-eggshell;
+  @apply text-eggshell;
 }
 
 .nav-links {
@@ -64,10 +64,6 @@ nav > ul.nav-links > li {
   p {
     @apply mt-5 md:text-2xl text-xl text-secondary bg-eggshell px-10 py-2 rounded-xl;
   }
-}
-
-.computer-desktop-icon {
-  @apply size-1/5;
 }
 
 .service-pane {
