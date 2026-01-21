@@ -1,7 +1,7 @@
+import MiniHeader from "@/components/MiniHeader";
 import PrelineScriptWrapper from "@/components/PrelineWrapper";
 import type { Metadata } from "next";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -36,7 +36,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex flex-col min-h-screen">
-          <Header />
+          {/* <Header /> */}
+          <MiniHeader />
           <main className="grow">{children}</main>
           <Footer />
         </div>

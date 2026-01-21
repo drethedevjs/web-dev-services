@@ -1,25 +1,24 @@
 import { headerLinks } from "@/data/headerLinks";
 import Link from "next/link";
-
-export default function Header() {
+export default function MiniHeader() {
   return (
-    <header className="mb-10 flex-col bg-white border-b border-gray-200 dark:bg-neutral-800 dark:border-neutral-700 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
-      <nav className="relative max-w-[85rem] w-full md:flex md:items-center md:justify-between md:gap-3 mx-auto px-4 sm:px-6 lg:px-8 py-2 dark:bg-neutral-900">
+    <header className="sticky top-4 inset-x-0 before:absolute before:inset-0 before:max-w-5xl before:mx-2 lg:before:mx-auto before:rounded-4xl before:border before:border-gray-200 dark:border-neutral-700 after:absolute after:inset-0 after:-z-1 after:max-w-5xl after:mx-2 lg:after:mx-auto after:rounded-4xl after:bg-white dark:bg-neutral-900 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full">
+      <nav className="relative max-w-5xl w-full md:flex md:items-center md:justify-between md:gap-3 ps-5 pe-2 mx-2 lg:mx-auto py-2 dark:bg-neutral-900">
         {/* Logo w/ Collapse Button */}
         <div className="flex items-center justify-between">
-          <Link
-            className="flex-none font-semibold text-3xl text-black focus:outline-hidden focus:opacity-80 dark:text-white"
-            href="/"
+          <a
+            className="flex-none font-semibold text-2xl text-black focus:outline-hidden focus:opacity-80 dark:text-white"
+            href="#"
             aria-label="Brand"
           >
             Honeystack
-          </Link>
+          </a>
 
           {/* Collapse Button */}
           <div className="md:hidden">
             <button
               type="button"
-              className="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
+              className="hs-collapse-toggle relative size-9 flex justify-center items-center text-sm font-semibold rounded-full border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-neutral-700 dark:hover:bg-neutral-700 dark:focus:bg-neutral-700"
               id="hs-header-classic-collapse"
               aria-expanded="false"
               aria-controls="hs-header-classic"
