@@ -7,7 +7,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { object, string } from "yup";
-import "./style.css";
 
 const schema = object({
   firstName: string().required("First name is required"),
