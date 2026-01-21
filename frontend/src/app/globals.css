@@ -1,6 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* @plugin 'flowbite-react/plugin/tailwindcss';
+
+@source '../../.flowbite-react/class-list.json'; */
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dark: #333333;
+  --color-primary: #4c9bfc;
+  --color-secondary: #ff7b5b;
+  --color-eggshell: #f5f5f5;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 body {
   @apply bg-primary text-eggshell;
@@ -30,7 +59,7 @@ nav > ul.nav-links > li {
   @apply flex flex-col items-center text-center md:py-24 py-5;
 
   h1 {
-    @apply md:text-6xl text-3xl font-bold mt-10 bg-clip-text text-transparent bg-gradient-to-r from-eggshell to-secondary;
+    @apply md:text-6xl text-3xl font-bold mt-10 bg-clip-text text-transparent bg-linear-to-r from-eggshell to-secondary;
   }
 
   p {
