@@ -127,7 +127,7 @@ nav > ul.nav-links > li {
 }
 
 .wds-container {
-  @apply container mx-auto lg:px-32 px-10;
+  @apply container mx-auto lg:px-32 px-10 mt-10;
 }
 
 footer {
