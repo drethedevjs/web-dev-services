@@ -1,13 +1,16 @@
 import services from "@/data/services";
+import Image from "next/image";
 
 export default function Offerings() {
   return (
     <div className="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div className="aspect-16/7">
-        <img
+        <Image
           className="w-full h-full object-cover rounded-xl"
-          src="stock-coding.jpg"
+          src="/stock-coding.jpg"
           alt="Several monitors showing code."
+          width={6016}
+          height={4016}
         />
       </div>
 
@@ -28,7 +31,7 @@ export default function Offerings() {
             {services.map((s) => {
               const IconComponent = s.icon;
               return (
-                <div className="flex gap-x-5">
+                <div key={s.id} className="flex gap-x-5">
                   <IconComponent className="shrink-0 mt-1 size-6 text-secondary dark:text-primary" />
                   <div className="grow" key={s.id}>
                     <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
