@@ -36,15 +36,17 @@ export default function Hero() {
         {/* End Announcement Banner */}
 
         {/* Title */}
-        <div className="max-w-3xl text-center mx-auto">
-          <ComputerDesktopIcon
-            className="size-1/2 place-self-center text-secondary dark:text-gray-200"
-            color="black"
-            fontSize={16}
-          />
+        <div className="max-w-3xl mx-auto">
+          <div className="flex justify-center mb-4">
+            <ComputerDesktopIcon
+              className="size-1/2 text-secondary dark:text-gray-200"
+              color="black"
+              fontSize={16}
+            />
+          </div>
           <h1 className="hidden">Honeystack Web Development Services</h1>
-          <div className="block font-bold text-gray-800  dark:text-neutral-200">
-            <p className="md:text-8xl text-3xl  font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
+          <div className="block font-bold text-gray-800 dark:text-neutral-200 text-center">
+            <p className="md:text-8xl text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
               Honeystack
             </p>
             <p className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide">
