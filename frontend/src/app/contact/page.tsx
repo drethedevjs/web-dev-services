@@ -1,91 +1,119 @@
-"use client";
-import CustomerFormData from "@/interfaces/CustomerFormData";
-import { yupResolver } from "@hookform/resolvers/yup";
-import axios from "axios";
-import "dotenv/config";
-import Link from "next/link";
-import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { object, string } from "yup";
-
-const schema = object({
-  firstName: string().required("First name is required"),
-  lastName: string().required("Last name is required"),
-  email: string().email("Invalid email").required("Email is required"),
-  message: string().min(15, "Message isn't long enough").required("Message is required"),
-});
-
 export default function Contact() {
-  const [hasSent, setHasSent] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<CustomerFormData>({ resolver: yupResolver<CustomerFormData>(schema) });
-
-  const handleFormSubmit: SubmitHandler<CustomerFormData> = async (formData) => {
-    setLoading(true);
-
-    try {
-      await axios.post(`${process.env.NEXT_PUBLIC_BASE_MAILER_URL}/api/email/send-crsa`, formData);
-      setHasSent(true);
-    } catch (err: unknown) {
-      if (axios.isAxiosError(err)) console.error(err.message);
-
-      console.log("An unexpected error has occurred:", err);
-    }
-
-    setLoading(false);
-  };
   return (
     <div className="wds-container page">
-      <h1>Contact</h1>
-      <div className={hasSent ? "hidden" : ""}>
-        <form onSubmit={handleSubmit(handleFormSubmit)}>
-          <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-            <div className="md:col-span-1 col-span-2">
-              <label htmlFor="firstName">First Name</label>
-              <input id="firstName" {...register("firstName")} required />
-              <small className="text-red-500">{errors.firstName?.message}</small>
+      <h1 className="dark:text-white">Contact</h1>
+      <div className="max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-6 md:gap-8 lg:gap-12">
+          <div className="aspect-w-16 aspect-h-6 lg:aspect-h-14 overflow-hidden bg-gray-100 rounded-2xl dark:bg-neutral-800">
+            <img
+              className="group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-cover rounded-2xl"
+              src="https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Contacts Image"
+            />
+          </div>
+
+          <div className="space-y-8 lg:space-y-16">
+            <div>
+              <h3 className="mb-5 font-semibold text-black dark:text-white">Our address</h3>
+
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                <div className="flex gap-4">
+                  <svg
+                    className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+
+                  <div className="grow">
+                    <p className="text-sm text-gray-600 dark:text-neutral-400">South Carolina</p>
+                    <address className="mt-1 text-black not-italic dark:text-white">
+                      336 Georgia Ave.
+                      <br />
+                      Ste 106 PMB 200
+                      <br />
+                      North Augusta, SC 29841
+                    </address>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="md:col-span-1 col-span-2">
-              <label htmlFor="lastName">Last Name</label>
-              <input id="lastName" {...register("lastName")} required />
-              <small className="text-red-500">{errors.lastName?.message}</small>
-            </div>
-            <div className="col-span-2">
-              <label htmlFor="email">Email</label>
-              <input id="email" {...register("email")} type="email" required />
-              <small className="text-red-500">{errors.email?.message}</small>
-            </div>
-            <div className="col-span-2">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" {...register("message")} minLength={15} rows={6} />
-              <small className="text-red-500">{errors.message?.message}</small>
+
+            <div>
+              <h3 className="mb-5 font-semibold text-black dark:text-white">Our contacts</h3>
+
+              {/* Grid */}
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+                <div className="flex gap-4">
+                  <svg
+                    className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"></path>
+                    <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"></path>
+                  </svg>
+
+                  <div className="grow">
+                    <p className="text-sm text-gray-600 dark:text-neutral-400">Email us</p>
+                    <p>
+                      <a
+                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
+                        href="mailto:drethedevjs@gmail.com"
+                      >
+                        drethedevjs@gmail.com
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <svg
+                    className="shrink-0 size-5 text-gray-500 dark:text-neutral-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+
+                  <div className="grow">
+                    <p className="text-sm text-gray-600 dark:text-neutral-400">Call us</p>
+                    <p>
+                      <a
+                        className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-1 before:w-full before:h-1 before:bg-yellow-400 hover:before:bg-black focus:outline-hidden focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
+                        href="tel:7064263022"
+                      >
+                        706-426-3022
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <button
-            className="send-btn disabled:opacity-30 disabled:cursor-progress"
-            disabled={loading}
-          >
-            Send
-          </button>
-        </form>
-      </div>
-      <div className={`${hasSent ? "" : "hidden"} text-center`}>
-        <h2 className="text-6xl font-bold mb-7">Sent</h2>
-        <p className="font-semibold mb-10">
-          Thank you for your message. I will be in touch very soon!
-        </p>
-        <div className="mt-10">
-          <Link
-            href="/"
-            className="text-xl text-secondary py-3 px-5 bg-white rounded hover:bg-secondary hover:text-white transition-colors"
-          >
-            Back to homepage
-          </Link>
         </div>
       </div>
     </div>
