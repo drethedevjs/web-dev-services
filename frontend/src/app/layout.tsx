@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description: "Building Custom Web Applications for Small Businesses",
   authors: [{ name: "Andre Thomas", url: "https://honeystack.solutions" }],
   generator: "Next.js",
-  keywords: ["custom website", "website", "hosting"],
+  keywords: ["custom website", "website", "hosting", "custom web application"],
   openGraph: {
     type: "website",
     url: "https://honeystack.solutions",
-    title: "CSRA Web Services",
+    title: "Honeystack Web Development Services",
     description: "Building custom websites for small businesses.",
-    siteName: "CSRA Web Services",
+    siteName: "Honeystack Web Development Services",
     images: [
       {
         url: "https://honeystack.solutions/honeystack.png",
