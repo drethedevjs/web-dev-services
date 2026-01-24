@@ -33,7 +33,7 @@
 }
 
 body {
-  @apply text-eggshell dark:bg-black;
+  @apply dark:text-eggshell dark:bg-black;
 }
 
 .nav-links {
