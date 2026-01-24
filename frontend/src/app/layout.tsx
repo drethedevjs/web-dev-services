@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     siteName: "CSRA Web Services",
     images: [
       {
-        url: "https://honeystack.solutions/csra-web-dev-screensht.png",
+        url: "https://honeystack.solutions/honeystack.png",
         width: 1920,
         height: 1080,
-        alt: "Screenshot of CSRA Web Services",
+        alt: "Screenshot of Honeystack homepage.",
       },
     ],
   },
