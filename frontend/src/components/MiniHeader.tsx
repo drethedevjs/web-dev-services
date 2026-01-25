@@ -10,7 +10,7 @@ export default function MiniHeader() {
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link
               className="flex-none font-semibold text-2xl text-black focus:outline-hidden focus:opacity-80 dark:text-white"
-              href="#"
+              href="/"
               aria-label="Brand"
             >
               Honeystack
