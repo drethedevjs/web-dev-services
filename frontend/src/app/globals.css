@@ -103,19 +103,19 @@ nav > ul.nav-links > li {
 }
 
 .contact-call-to-action {
-  @apply bg-primary py-32 px-20 flex flex-col text-center items-center;
+  @apply bg-primary dark:bg-primary-dark lg:py-32 lg:px-20 px-8 py-10 flex flex-col text-center items-center;
 
   h2 {
-    @apply md:text-8xl text-6xl text-eggshell text-center mb-3 font-bold;
+    @apply text-4xl md:text-5xl lg:text-8xl text-eggshell text-center mb-3 font-bold;
   }
 
   p {
-    @apply mt-3 text-2xl lg:px-52 px-0 font-semibold;
+    @apply mt-3 text-lg md:text-xl lg:text-3xl lg:px-52 px-0;
   }
 }
 
 .cta-btn {
-  @apply mt-20 py-3 px-6 bg-secondary text-eggshell border-2 border-secondary hover:bg-eggshell hover:text-secondary rounded-lg font-semibold text-2xl transition-colors;
+  @apply mt-20 py-3 px-6 bg-secondary text-eggshell hover:bg-secondary-dark rounded-lg text-2xl transition-colors;
 }
 
 .page {

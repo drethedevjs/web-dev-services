@@ -46,10 +46,10 @@ export default function Hero() {
           </div>
           <h1 className="hidden">Honeystack Web Development Services</h1>
           <div className="block font-bold text-gray-800 dark:text-neutral-200 text-center">
-            <p className="md:text-8xl text-3xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
+            <p className="lg:text-8xl md:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary">
               Honeystack
             </p>
-            <p className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-wide">
+            <p className="text-3xl md:text-4xl lg:text-6xl font-medium tracking-wide">
               Web Development Services
             </p>
           </div>
