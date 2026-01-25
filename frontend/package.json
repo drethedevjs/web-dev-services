@@ -16,7 +16,7 @@
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
     "flowbite-react": "^0.11.7",
-    "next": "^15.1.0",
+    "next": "^16.1.4",
     "preline": "^3.2.3",
     "prettier": "^3.5.3",
     "react": "19.0.0",
