@@ -10,7 +10,6 @@ export default function Pricing() {
       <div className="max-w-340 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         {/* WEBSITES SECTION */}
         <div className="mb-20">
-          {/* Title */}
           <div className="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
             <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
               Website Packages
@@ -19,7 +18,6 @@ export default function Pricing() {
               Professional websites for your business
             </p>
           </div>
-          {/* End Title */}
 
           {/* Grid */}
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:items-center">
@@ -75,6 +73,11 @@ export default function Pricing() {
               );
             })}
           </div>
+          <small>
+            <sup>*</sup>Shopify (or any online store platform) integration connects your existing
+            store to the website. Store setup, product management, fulfillment, taxes, and ongoing
+            store administration are handled by the client.
+          </small>
           {/* End Grid */}
 
           {/* À La Carte for Websites */}

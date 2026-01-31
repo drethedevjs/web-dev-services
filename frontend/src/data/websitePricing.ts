@@ -8,10 +8,9 @@ export const websitePricing = [
       "Up to 10 pages",
       "Responsive design",
       "Built-in SEO",
-      "Performance-optimized build (Core Web Vitals-friendly)",
+      "Performance-optimized build",
       "HTTPS & security best practices",
       "Client owns the code & content",
-      "Deployed and available to the world",
       "No proprietary CMS lock-in",
       "3 revisions",
       "1 month timeline",
@@ -25,8 +24,8 @@ export const websitePricing = [
     features: [
       "Everything in Starter package",
       "Up to 20 pages",
-      "Brand-aligned custom design (colors, typography, layout)",
-      "Lead capture forms (contact, inquiries, etc.)",
+      "Brand-aligned custom design",
+      "Lead capture contact forms",
       "30 days post-launch support",
       "5 revisions",
       "2 month timeline",
@@ -40,7 +39,7 @@ export const websitePricing = [
     features: [
       "Everything in Growth package",
       "Up to 40-50 pages",
-      "E-commerce ready (Stripe / Shopify / headless)",
+      "E-commerce ready*",
       "Analytics setup",
       "Basic conversion tracking",
       "Newsletter integration",
@@ -77,5 +76,10 @@ export const websiteAddOns = [
     name: "Monthly Maintenance ",
     description: "4 hours per month",
     price: "175",
+  },
+  {
+    name: "E-commerce Integration",
+    description: "Integrate an existing Shopify store or Stripe checkout into the website",
+    price: "TBD / quoted",
   },
 ];
