@@ -7,8 +7,12 @@ export const websitePricing = [
     features: [
       "Up to 10 pages",
       "Responsive design",
-      "Contact form",
       "Built-in SEO",
+      "Performance-optimized build (Core Web Vitals-friendly)",
+      "HTTPS & security best practices",
+      "Client owns the code & content",
+      "Deployed and available to the world",
+      "No proprietary CMS lock-in",
       "3 revisions",
       "1 month timeline",
     ],
@@ -21,8 +25,9 @@ export const websitePricing = [
     features: [
       "Everything in Starter package",
       "Up to 20 pages",
-      "Custom design",
-      "Blog functionality",
+      "Brand-aligned custom design (colors, typography, layout)",
+      "Lead capture forms (contact, inquiries, etc.)",
+      "30 days post-launch support",
       "5 revisions",
       "2 month timeline",
     ],
@@ -34,10 +39,13 @@ export const websitePricing = [
     isMostPopular: false,
     features: [
       "Everything in Growth package",
-      "Unlimited pages",
-      "E-commerce ready",
+      "Up to 40-50 pages",
+      "E-commerce ready (Stripe / Shopify / headless)",
+      "Analytics setup",
+      "Basic conversion tracking",
       "Newsletter integration",
       "Analytics setup",
+      "60 days post-launch support",
       "10 revisions",
       "3 month timeline",
     ],
@@ -46,12 +54,17 @@ export const websitePricing = [
 
 export const websiteAddOns = [
   {
-    name: "Payment Processing",
-    description: "Stripe/Square/Paypal setup",
+    name: "Blog Functionality",
+    description: "Log into your site and write engaging content",
+    price: "499",
+  },
+  {
+    name: "Basic payment setup",
+    description: "Stripe/Square/Paypal Integration",
     price: "150",
   },
   {
-    name: "Social Media Integration",
+    name: "Social Media Embeds & Links",
     description: "Connect all platforms",
     price: "100",
   },
@@ -63,6 +76,6 @@ export const websiteAddOns = [
   {
     name: "Monthly Maintenance ",
     description: "4 hours per month",
-    price: "75",
+    price: "175",
   },
 ];
